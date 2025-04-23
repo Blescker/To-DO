@@ -1,0 +1,138 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #0a85d1;
+    background: linear-gradient(40deg,rgba(10, 133, 209, 1) 0%, rgba(183, 134, 191, 1) 100%); 
+    min-height: 100vh;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-weight: 400px;
+    color: wheat;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.btn{
+    display: flex;
+    justify-content: end;
+    margin: 20px;
+}
+.btn .btn-task{
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #40B3A2;
+    min-width: 200px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn .btn-task:hover{
+    opacity: .95;
+}
+.btn .btn-task .animation{
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+  
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+    }
+  }
+.alta{
+    color: red;
+}
+.media{
+    color: green;
+}
+.baja{
+    color: black;
+}
+.contenedor-task{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    background: #abb8e0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 5px;
+    width: fit-content;
+    margin: 5px;
+    max-width: 100%;
+    min-width: 250px;
+    border-radius: 10px;
+}
+.card .completar-tarea{
+    min-width: 150px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.card .eliminar-tarea{
+    min-width: 150px;
+    border-radius: 5px;
+}
+.card.completada{
+    opacity: 0.6;
+    text-decoration: line-through;
+    background-color: #333;
+}
+
+.dialog {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+.dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4); /* oscurece el fondo */
+}
+  
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #333;
+}
+  
+.formulario input,
+.formulario select,
+.formulario button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+  
